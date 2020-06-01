@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewData["Title"] = "Albums";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Albums</h1>
+@foreach (Album a in Model)
+{
+
+    <div>Artists Name: @a.artist </div>
+    <div>Album Title: @a.title </div>
+    <div> <img src="@Url.Content(@a.image)" /> </div>
+    <div class="lead">Notes on why I like it: @a.note </div>
+    <p></p>
+
+}

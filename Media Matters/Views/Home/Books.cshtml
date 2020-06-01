@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewData["Title"] = "Books";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Books</h1>
+@foreach (Book b in Model)
+{
+    
+        <div>ISBN: @b.ISBN </div>
+        <div>Author Lastname: @b.lastname </div>
+        <div>Author Firstname: @b.firstname </div>
+        <div>Book Title: @b.title </div>
+        <div>Edition: @b.edition </div>
+        <div>Published Date: @b.publishedDate </div>
+        <div> <img src="@Url.Content(@b.image)" /> </div>
+        <div class="lead">
+            Notes on why I like it:
+            @b.note
+        </div>
+        <p></p>
+    
+}
+

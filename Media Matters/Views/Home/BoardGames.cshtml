@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewData["Title"] = "BoardGames";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>BoardGames</h1>
+@foreach (BoardGame g in Model)
+{
+
+    <div>Game Name: @g.title </div>
+    <div>Genre: @g.genre </div>
+    <div>Creator(s): @g.creator </div>
+    <div>Publisher: @g.publisher </div>
+    <div> <img src="@Url.Content(@g.image)" /> </div>
+    <div class="lead">Notes on why I like it: @g.note </div>
+<p></p>
+
+}
